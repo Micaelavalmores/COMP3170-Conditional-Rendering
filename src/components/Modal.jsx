@@ -19,7 +19,7 @@ function Modal({ isOpen, onClose, children }) {
         justifyContent: 'center',
         alignItems: 'center',
         zIndex: 9999,
-        fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+        fontFamily: "'Figtree', sans-serif",
       }}
       onClick={onBackgroundClick}
       role="dialog"

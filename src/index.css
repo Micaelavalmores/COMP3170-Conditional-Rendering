@@ -1,4 +1,6 @@
-
+* {
+  font-family: 'Figtree', sans-serif;
+}
 
 .app {
   display: flex;
@@ -58,7 +60,7 @@
 
 .AddButton:hover,
 .AddButton:focus {
-  background: hsl(347, 100%, 52%);
+  background: hsl(334, 100%, 80%);
   color: #fff;
   box-shadow: 0 4px 14px rgba(48,105,237,0.18);
   border: none;
@@ -129,4 +131,8 @@
   background: #cccccc;
   color: #666666;
   cursor: not-allowed;
+}
+
+.filterInput::placeholder {
+  color: #8b008b;
 }
