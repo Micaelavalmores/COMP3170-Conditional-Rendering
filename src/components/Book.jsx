@@ -1,13 +1,13 @@
 import './Book.css';
 
-function Book({ image, title, subtitle, isbn13, price, url, onSelect, isSelected }) {
+function Book({ image, title, subtitle, isbn13, price, url, onSelect, isSelected, isOnLoan }) {
   const handleSelect = () => {
     onSelect(isbn13);
   };
 
   return (
     <div
-      className={`Book ${isSelected ? "selected" : ""}`}
+      className={`Book ${isSelected ? "selected" : ""} ${isOnLoan ? "onLoan" : ""}`}
       onClick={handleSelect}
     >
       <img className="Image" src={image} alt={title} />
@@ -17,6 +17,9 @@ function Book({ image, title, subtitle, isbn13, price, url, onSelect, isSelected
         <span className="Subtitle">{subtitle}</span>
         <span className="isbn13">{isbn13}</span>
         <span className="price">{price}</span>
+        {isOnLoan && (
+          <span className="loanBadge">On Loan</span>
+        )}
       </div>
       <a className="url" href={url} target="_blank" rel="noreferrer">
         Learn more
